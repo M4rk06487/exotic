@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="test.css">
+</head>
+<body>
+  <table>
+    <tr>
+      <td>
+        <div style="height: 10vh;"></div> <!-- Tér a görgetéshez -->
+
+        <div class="card" data-target="304" data-duration="3300">
+          <span class="counter">1</span>
+          <h1 class="cardh1">Elégedett ügyfelek</h1>
+        </div>
+      </td>
+      <td>
+        <div style="height: 10vh;"></div> <!-- Tér a görgetéshez -->
+      
+        <div class="card" data-target="520" data-duration="2500">
+          <span class="counter">1</span>
+          <h1 class="cardh1">Teljesített projektek</h1>
+        </div>
+      
+      
+    </td>
+    </tr>
+</table>
+    <script>
+// Easing függvény (ease-out)
+function easeOutQuad(t) {
+  return t * (2 - t); // Az idő (t) alapján kiszámítja az értéket
+}
+
+// Számláló animálása egy adott kártyához
+function animateCounter(card) {
+  const counter = card.querySelector(".counter");
+  const target = parseInt(card.dataset.target, 10); // Célérték a data attribútumból
+  const duration = parseInt(card.dataset.duration, 10); // Időtartam a data attribútumból
+  const startTime = performance.now(); // Animáció kezdése
+
+  function updateCounter(currentTime) {
+    const elapsedTime = currentTime - startTime;
+    const progress = Math.min(elapsedTime / duration, 1); // Időarány (0-1)
+    const easedProgress = easeOutQuad(progress); // Az easing alkalmazása
+
+    const value = Math.floor(easedProgress * target); // Az aktuális érték
+    counter.textContent = value;
+
+    if (progress < 1) {
+      requestAnimationFrame(updateCounter); // Következő képkocka frissítése
+    }
+  }
+
+  requestAnimationFrame(updateCounter); // Első hívás
+}
+
+// Ellenőrzi, hogy egy elem a viewportban van-e
+function isElementInViewport(el) {
+  const rect = el.getBoundingClientRect();
+  return rect.top >= 0 && rect.bottom <= window.innerHeight;
+}
+
+// Több kártya kezelése
+function initializeCounters() {
+  const cards = document.querySelectorAll(".card");
+  const animatedCards = new Set(); // Követi, mely kártyák animálódtak már
+
+  window.addEventListener("scroll", () => {
+    cards.forEach(card => {
+      if (isElementInViewport(card) && !animatedCards.has(card)) {
+        animatedCards.add(card); // Egyszer futtatja a kártya animációját
+        animateCounter(card);
+      }
+    });
+  });
+}
+
+// Az inicializálás indítása
+initializeCounters();
+</script>
+</body>
+</html>

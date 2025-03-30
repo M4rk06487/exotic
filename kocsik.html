@@ -1,0 +1,819 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+    <title>Wender Dealership</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="path/to/jquery.min.js"></script>
+    <script src="path/to/bootstrap.bundle.min.js"></script>
+    <script src='https://kit.fontawesome.com/a076d05399.js' crossorigin='anonymous'></script>
+    <link rel="stylesheet" href="kocsik.css">
+</head>
+<body>
+    <div class="container">
+        <div class="wrapper">
+          <input type="checkbox" id="btn" hidden>
+          <label for="btn" class="menu-btn">
+              <i class="fa fa-bars"></i>
+              <i class="fa fa-times"></i>
+          </label>
+          <nav id="sidebar">
+              <div class="title">Menü</div>
+              <ul class="list-items">
+                  <li><a href="index.html"><i class="fa fa-reply"></i>Főoldal</a></li>
+                  <li><a href= "Csatlakozz.html"><i class="fa fa-suitcase"></i>Csatlakozz Hozzánk</a></li>
+                  <li><a href= "rolunk.html"><i class="fa fa-users"></i>Rólunk</a></li>
+                  <li><a href= "rendeles.html"><i class="fa fa-handshake-o" aria-hidden="true"></i>Rendelés</a></li>
+                  <img src="kepek/exotic.png" alt="" width="80%" style="margin-left: 20px; margin-top: 130px;">
+                  <div class="icons">
+                      <a href="#"><i class="fa fa-facebook-f"></i></a>
+                      <a href="https://discord.com/invite/BzNHXJpGXQ" target="_blank"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-discord" viewBox="0 0 16 16">
+                        <path d="M13.545 2.907a13.2 13.2 0 0 0-3.257-1.011.05.05 0 0 0-.052.025c-.141.25-.297.577-.406.833a12.2 12.2 0 0 0-3.658 0 8 8 0 0 0-.412-.833.05.05 0 0 0-.052-.025c-1.125.194-2.22.534-3.257 1.011a.04.04 0 0 0-.021.018C.356 6.024-.213 9.047.066 12.032q.003.022.021.037a13.3 13.3 0 0 0 3.995 2.02.05.05 0 0 0 .056-.019q.463-.63.818-1.329a.05.05 0 0 0-.01-.059l-.018-.011a9 9 0 0 1-1.248-.595.05.05 0 0 1-.02-.066l.015-.019q.127-.095.248-.195a.05.05 0 0 1 .051-.007c2.619 1.196 5.454 1.196 8.041 0a.05.05 0 0 1 .053.007q.121.1.248.195a.05.05 0 0 1-.004.085 8 8 0 0 1-1.249.594.05.05 0 0 0-.03.03.05.05 0 0 0 .003.041c.24.465.515.909.817 1.329a.05.05 0 0 0 .056.019 13.2 13.2 0 0 0 4.001-2.02.05.05 0 0 0 .021-.037c.334-3.451-.559-6.449-2.366-9.106a.03.03 0 0 0-.02-.019m-8.198 7.307c-.789 0-1.438-.724-1.438-1.612s.637-1.613 1.438-1.613c.807 0 1.45.73 1.438 1.613 0 .888-.637 1.612-1.438 1.612m5.316 0c-.788 0-1.438-.724-1.438-1.612s.637-1.613 1.438-1.613c.807 0 1.451.73 1.438 1.613 0 .888-.631 1.612-1.438 1.612"/>
+                      </svg></a>
+                      <a href="#"><i class="fa fa-twitch"></i></a>
+                      <a href="#"><i class="fa fa-youtube"></i></a>
+                  </div>
+              </ul>
+          </nav>
+      </div>
+      <table>
+        <!-- Első sor -->
+        <tr>
+          <td class="brand">Audi</td>
+        </tr>
+        <tr>
+          <td>
+            <div class="card">
+              <div class="image">
+                <img src="kepek/5audi/5audi1.png" alt="ProductImage" id="5audiImage" class="kep">
+              </div>
+              <div class="productTitle">
+                RS5
+              </div>
+              <div class="cost">
+                $60.99
+              </div>
+              <div class="radio-inputs">
+                <label class="radio">
+                  <input checked="" name="5audiRadio" type="radio" onchange="changeImage5audi(1)">
+                  <span class="name">FB</span>
+                </label>
+                <label class="radio">
+                  <input name="5audiRadio" type="radio" onchange="changeImage5audi(3)">
+                  <span class="name">MW</span>
+                </label>
+                <label class="radio">
+                  <input name="5audiRadio" type="radio" onchange="changeImage5audi(5)">
+                  <span class="name">RS</span>
+                </label>
+              </div>
+              <a href="rs5.html"><button class="addtocart">További Információk</button></a>
+            </div>
+          </td>
+          <td>
+            <div class="card">
+              <div class="image">
+                <img src="kepek/rsq8/rsq81.png" alt="ProductImage" id="rsq8Image" class="kep">
+              </div>
+              <div class="productTitle">
+                RSQ8
+              </div>
+              <div class="cost">
+                $60.99
+              </div>
+              <div class="radio-inputs">
+                <label class="radio">
+                  <input checked="" name="rsq8Radio" type="radio" onchange="changeImageRsq8(1)">
+                  <span class="name">FB</span>
+                </label>
+                <label class="radio">
+                  <input name="rsq8Radio" type="radio" onchange="changeImageRsq8(3)">
+                  <span class="name">MW</span>
+                </label>
+                <label class="radio">
+                  <input name="rsq8Radio" type="radio" onchange="changeImageRsq8(5)">
+                  <span class="name">RS</span>
+                </label>
+              </div>
+              <a href="rsq8.html"><button class="addtocart">További Információk</button></a>
+            </div>
+          </td>
+          <td>
+            <div class="card">
+              <div class="image">
+                <img src="kepek/rs7/rs71.png" alt="ProductImage" id="rs7Image" class="kep">
+              </div>
+              <div class="productTitle">
+                RS7
+              </div>
+              <div class="cost">
+                $60.99
+              </div>
+              <div class="radio-inputs">
+                <label class="radio">
+                  <input checked="" name="rs7Radio" type="radio" onchange="changeImageRs7(1)">
+                  <span class="name">FB</span>
+                </label>
+                <label class="radio">
+                  <input name="rs7Radio" type="radio" onchange="changeImageRs7(3)">
+                  <span class="name">MW</span>
+                </label>
+                <label class="radio">
+                  <input name="rs7Radio" type="radio" onchange="changeImageRs7(5)">
+                  <span class="name">RS</span>
+                </label>
+              </div>
+              <a href="rs7.html"><button class="addtocart">További Információk</button></a>
+            </div>
+          </td>
+          <td>
+            <div class="card">
+              <div class="image">
+                <img src="kepek/rs6/rs61.png" alt="ProductImage" id="rs6Image" class="kep">
+              </div>
+              <div class="productTitle">
+                RS6
+              </div>
+              <div class="cost">
+                $60.99
+              </div>
+              <div class="radio-inputs">
+                <label class="radio">
+                  <input checked="" name="rs6Radio" type="radio" onchange="changeImageRs6(1)">
+                  <span class="name">FB</span>
+                </label>
+                <label class="radio">
+                  <input name="rs6Radio" type="radio" onchange="changeImageRs6(3)">
+                  <span class="name">MW</span>
+                </label>
+                <label class="radio">
+                  <input name="rs6Radio" type="radio" onchange="changeImageRs6(5)">
+                  <span class="name">RS</span>
+                </label>
+              </div>
+              <a href="rs6.html"><button class="addtocart">További Információk</button></a>
+            </div>
+          </td>
+        </tr>
+        <tr>
+          <td class="brand">Bentley</td>
+          <tr>
+          <td>
+            <div class="card">
+              <div class="image">
+                <img src="kepek/mflyingspur/mflyingspur1.png" alt="ProductImage" id="mflyingspurImage" class="kep">
+              </div>
+              <div class="productTitle">
+                Flying Spur
+              </div>
+              <div class="cost">
+                $60.99
+              </div>
+              <div class="radio-inputs">
+                <label class="radio">
+                  <input checked="" name="mflyingspurRadio" type="radio" onchange="changeImageMflyingspur(1)">
+                  <span class="name">FB</span>
+                </label>
+                <label class="radio">
+                  <input name="mflyingspurRadio" type="radio" onchange="changeImageMflyingspur(3)">
+                  <span class="name">MW</span>
+                </label>
+                <label class="radio">
+                  <input name="mflyingspurRadio" type="radio" onchange="changeImageMflyingspur(5)">
+                  <span class="name">RS</span>
+                </label>
+              </div>
+              <a href="mflyingspur.html"><button class="addtocart">További Információk</button></a>
+            </div>
+          </td>
+          <td>
+            <div class="card">
+              <div class="image">
+                <img src="kepek/bentley/bentley1.png" alt="ProductImage" id="bentleyImage" class="kep">
+              </div>
+              <div class="productTitle">
+                Continental GT
+              </div>
+              <div class="cost">
+                $60.99
+              </div>
+              <div class="radio-inputs">
+                <label class="radio">
+                  <input checked="" name="bentleyRadio" type="radio" onchange="changeImageBentley(1)">
+                  <span class="name">FB</span>
+                </label>
+                <label class="radio">
+                  <input name="bentleyRadio" type="radio" onchange="changeImageBentley(3)">
+                  <span class="name">MW</span>
+                </label>
+                <label class="radio">
+                  <input name="bentleyRadio" type="radio" onchange="changeImageBentley(5)">
+                  <span class="name">RS</span>
+                </label>
+              </div>
+              <a href="bentley.html"><button class="addtocart">További Információk</button></a>
+            </div>
+          </td>
+          <td>
+            <div class="card">
+              <div class="image">
+                <img src="kepek/bentayga/bentayga1.png" alt="ProductImage" id="bentaygaImage" class="kep">
+              </div>
+              <div class="productTitle">
+                Bentayga
+              </div>
+              <div class="cost">
+                $60.99
+              </div>
+              <div class="radio-inputs">
+                <label class="radio">
+                  <input checked="" name="BentaygaRadio" type="radio" onchange="changeImageBentayga(1)">
+                  <span class="name">FB</span>
+                </label>
+                <label class="radio">
+                  <input name="BentaygaRadio" type="radio" onchange="changeImageBentayga(3)">
+                  <span class="name">MW</span>
+                </label>
+                <label class="radio">
+                  <input name="BentaygaRadio" type="radio" onchange="changeImageBentayga(5)">
+                  <span class="name">RS</span>
+                </label>
+              </div>
+              <a href="bentayga.html"><button class="addtocart">További Információk</button></a>
+            </div>
+          </td>
+        </tr>
+        <tr>
+          <td class="brand">BMW</td>
+        </tr>
+        <tr>
+          <td>
+            <div class="card">
+              <div class="image">
+                <img src="kepek/m5/m51.png" alt="ProductImage" id="m5Image" class="kep">
+              </div>
+              <div class="productTitle">
+                M5
+              </div>
+              <div class="cost">
+                $60.99
+              </div>
+              <div class="radio-inputs">
+                <label class="radio">
+                  <input checked="" name="m5Radio" type="radio" onchange="changeImageM5(1)">
+                  <span class="name">FB</span>
+                </label>
+                <label class="radio">
+                  <input name="m5Radio" type="radio" onchange="changeImageM5(3)">
+                  <span class="name">MW</span>
+                </label>
+                <label class="radio">
+                  <input name="m5Radio" type="radio" onchange="changeImageM5(5)">
+                  <span class="name">RS</span>
+                </label>
+              </div>
+              <a href="m5.html"><button class="addtocart">További Információk</button></a>
+            </div>
+          </td>
+          <td>
+            <div class="card">
+              <div class="image">
+                <img src="kepek/owlalpina/pina1.png" alt="ProductImage" id="pinaImage" class="kep">
+              </div>
+              <div class="productTitle">
+                Alpina B7
+              </div>
+              <div class="cost">
+                $60.99
+              </div>
+              <div class="radio-inputs">
+                <label class="radio">
+                  <input checked="" name="PinaRadio" type="radio" onchange="changeImagePina(1)">
+                  <span class="name">FB</span>
+                </label>
+                <label class="radio">
+                  <input name="PinaRadio" type="radio" onchange="changeImagePina(3)">
+                  <span class="name">MW</span>
+                </label>
+                <label class="radio">
+                  <input name="PinaRadio" type="radio" onchange="changeImagePina(5)">
+                  <span class="name">RS</span>
+                </label>
+              </div>
+              <a href="owlalpina.html"><button class="addtocart">További Információk</button></a>
+            </div>
+          </td>
+        </tr>
+        <tr>
+          <td class="brand">Mercedes</td>
+        </tr>
+        <tr>
+          <td>
+            <div class="card">
+              <div class="image">
+                <img src="kepek/s680/6801.png" alt="ProductImage" id="s680Image" class="kep">
+              </div>
+              <div class="productTitle">
+                S680
+              </div>
+              <div class="cost">
+                $60.99
+              </div>
+              <div class="radio-inputs">
+                <label class="radio">
+                  <input checked="" name="s680Radio" type="radio" onchange="changeImageS680(1)">
+                  <span class="name">FB</span>
+                </label>
+                <label class="radio">
+                  <input name="s680Radio" type="radio" onchange="changeImageS680(3)">
+                  <span class="name">MW</span>
+                </label>
+                <label class="radio">
+                  <input name="s680Radio" type="radio" onchange="changeImageS680(5)">
+                  <span class="name">RS</span>
+                </label>
+              </div>
+              <a href="s680.html"><button class="addtocart">További Információk</button></a>
+            </div>
+          </td>
+          <td>
+            <div class="card">
+              <div class="image">
+                <img src="kepek/gls/gls1.png" alt="ProductImage" id="glsImage" class="kep">
+              </div>
+              <div class="productTitle">
+                GLS
+              </div>
+              <div class="cost">
+                $60.99
+              </div>
+              <div class="radio-inputs">
+                <label class="radio">
+                  <input checked="" name="glsRadio" type="radio" onchange="changeImageGls(1)">
+                  <span class="name">FB</span>
+                </label>
+                <label class="radio">
+                  <input name="glsRadio" type="radio" onchange="changeImageGls(3)">
+                  <span class="name">MW</span>
+                </label>
+                <label class="radio">
+                  <input name="glsRadio" type="radio" onchange="changeImageGls(5)">
+                  <span class="name">RS</span>
+                </label>
+              </div>
+              <a href="gls.html"><button class="addtocart">További Információk</button></a>
+            </div>
+          </td>
+          <td>
+            <div class="card">
+              <div class="image">
+                <img src="kepek/benze55/benze551.png" alt="ProductImage" id="benzeImage" class="kep">
+              </div>
+              <div class="productTitle">
+                CLS 53
+              </div>
+              <div class="cost">
+                $60.99
+              </div>
+              <div class="radio-inputs">
+                <label class="radio">
+                  <input checked="" name="benzeRadio" type="radio" onchange="changeImageBenze(1)">
+                  <span class="name">FB</span>
+                </label>
+                <label class="radio">
+                  <input name="benzeRadio" type="radio" onchange="changeImageBenze(3)">
+                  <span class="name">MW</span>
+                </label>
+                <label class="radio">
+                  <input name="benzeRadio" type="radio" onchange="changeImageBenze(5)">
+                  <span class="name">RS</span>
+                </label>
+              </div>
+              <a href="benze55.html"><button class="addtocart">További Információk</button></a>
+            </div>
+          </td>
+          <td>
+            <div class="card">
+              <div class="image">
+                <img src="kepek/eclass/eclass1.png" alt="ProductImage" id="eclassImage" class="kep">
+              </div>
+              <div class="productTitle">
+                E-Class
+              </div>
+              <div class="cost">
+                $60.99
+              </div>
+              <div class="radio-inputs">
+                <label class="radio">
+                  <input checked="" name="eclassRadio" type="radio" onchange="changeImageEclass(1)">
+                  <span class="name">FB</span>
+                </label>
+                <label class="radio">
+                  <input name="eclassRadio" type="radio" onchange="changeImageEclass(3)">
+                  <span class="name">MW</span>
+                </label>
+                <label class="radio">
+                  <input name="eclassRadio" type="radio" onchange="changeImageEclass(5)">
+                  <span class="name">RS</span>
+                </label>
+              </div>
+              <a href="eclass.html"><button class="addtocart">További Információk</button></a>
+            </div>
+          </td>
+          <td>
+            <div class="card">
+              <div class="image">
+                <img src="kepek/63s/63s1.png" alt="ProductImage" id="63sImage" class="kep">
+              </div>
+              <div class="productTitle">
+                GT 63S
+              </div>
+              <div class="cost">
+                $60.99
+              </div>
+              <div class="radio-inputs">
+                <label class="radio">
+                  <input checked="" name="63sRadio" type="radio" onchange="changeImage63s(1)">
+                  <span class="name">FB</span>
+                </label>
+                <label class="radio">
+                  <input name="63sRadio" type="radio" onchange="changeImage63s(3)">
+                  <span class="name">MW</span>
+                </label>
+                <label class="radio">
+                  <input name="63sRadio" type="radio" onchange="changeImage63s(5)">
+                  <span class="name">RS</span>
+                </label>
+              </div>
+              <a href="63s.html"><button class="addtocart">További Információk</button></a>
+            </div>
+          </td>
+        </tr>
+        <tr>
+          <td class="brand">Porsche</td>
+        </tr>
+        <tr>
+          <td>
+            <div class="card">
+              <div class="image">
+                <img src="kepek/oycbpm/taycan1.png" alt="ProductImage" id="oycbpmImage" class="kep">
+              </div>
+              <div class="productTitle">
+                Taycan
+              </div>
+              <div class="cost">
+                $60.99
+              </div>
+              <div class="radio-inputs">
+                <label class="radio">
+                  <input checked="" name="oycbpmRadio" type="radio" onchange="changeImageOycbpm(1)">
+                  <span class="name">FB</span>
+                </label>
+                <label class="radio">
+                  <input name="oycbpmRadio" type="radio" onchange="changeImageOycbpm(3)">
+                  <span class="name">MW</span>
+                </label>
+                <label class="radio">
+                  <input name="oycbpmRadio" type="radio" onchange="changeImageOycbpm(5)">
+                  <span class="name">RS</span>
+                </label>
+              </div>
+              <a href="oycbpm.html"><button class="addtocart">További Információk</button></a>
+            </div>
+          </td>
+          <td>
+            <div class="card">
+              <div class="image">
+                <img src="kepek/911/9112.png" alt="ProductImage" id="911Image" class="kep">
+              </div>
+              <div class="productTitle">
+                911 CB
+              </div>
+              <div class="cost">
+                $60.99
+              </div>
+              <div class="radio-inputs">
+                <label class="radio">
+                  <input checked="" name="911Radio" type="radio" onchange="changeImage911(1)">
+                  <span class="name">Carbon Body</span>
+                </label>
+              </div>
+              <a href="911.html"><button class="addtocart">További Információk</button></a>
+            </div>
+          </td>
+        </tr>
+        <tr>
+          <td class="brand">Range Rover</td>
+        </tr>
+        <tr>
+          <td>
+            <div class="card">
+              <div class="image">
+                <img src="kepek/mansrr/rr1.png" alt="ProductImage" id="mansrrImage" class="kep">
+              </div>
+              <div class="productTitle">
+                SV Mansory
+              </div>
+              <div class="cost">
+                $60.99
+              </div>
+              <div class="radio-inputs">
+                <label class="radio">
+                  <input checked="" name="mansrrRadio" type="radio" onchange="changeImageMansrr(1)">
+                  <span class="name">FB</span>
+                </label>
+                <label class="radio">
+                  <input name="mansrrRadio" type="radio" onchange="changeImageMansrr(3)">
+                  <span class="name">MW</span>
+                </label>
+                <label class="radio">
+                  <input name="mansrrRadio" type="radio" onchange="changeImageMansrr(5)">
+                  <span class="name">RS</span>
+                </label>
+              </div>
+              <a href="mansrr.html"><button class="addtocart">További Információk</button></a>
+            </div>
+          </td>
+        </tr>
+        <tr>
+          <td class="brand" style="width:auto;">Rolls Royce</td>
+        </tr>
+        <tr>
+          <td>
+            <div class="card">
+              <div class="image">
+                <img src="kepek/bghost/ghost1.png" alt="ProductImage" id="bghostImage" class="kep">
+              </div>
+              <div class="productTitle">
+                Ghost
+              </div>
+              <div class="cost">
+                $60.99
+              </div>
+              <div class="radio-inputs">
+                <label class="radio">
+                  <input checked="" name="bghostRadio" type="radio" onchange="changeImageBghost(1)">
+                  <span class="name">FB</span>
+                </label>
+                <label class="radio">
+                  <input name="bghostRadio" type="radio" onchange="changeImageBghost(3)">
+                  <span class="name">MW</span>
+                </label>
+                <label class="radio">
+                  <input name="bghostRadio" type="radio" onchange="changeImageBghost(5)">
+                  <span class="name">RS</span>
+                </label>
+              </div>
+              <a href="bghost.html"><button class="addtocart">További Információk</button></a>
+            </div>
+          </td>
+          <td>
+            <div class="card">
+              <div class="image">
+                <img src="kepek/blurion/b1.png" alt="ProductImage" id="blurionImage" class="kep">
+              </div>
+              <div class="productTitle">
+                Wraith
+              </div>
+              <div class="cost">
+                $60.99
+              </div>
+              <div class="radio-inputs">
+                <label class="radio">
+                  <input checked="" name="blurionRadio" type="radio" onchange="changeImageBlurion(1)">
+                  <span class="name">FB</span>
+                </label>
+                <label class="radio">
+                  <input name="blurionRadio" type="radio" onchange="changeImageBlurion(3)">
+                  <span class="name">MW</span>
+                </label>
+                <label class="radio">
+                  <input name="blurionRadio" type="radio" onchange="changeImageBlurion(5)">
+                  <span class="name">RS</span>
+                </label>
+              </div>
+              <a href="coastline.html"><button class="addtocart">További Információk</button></a>
+            </div>
+          </td>
+          <td>
+            <div class="card">
+              <div class="image">
+                <img src="kepek/coastline/coastline1.png" alt="ProductImage" id="coastlineImage" class="kep">
+              </div>
+              <div class="productTitle">
+                Cullinan
+              </div>
+              <div class="cost">
+                $60.99
+              </div>
+              <div class="radio-inputs">
+                <label class="radio">
+                  <input checked="" name="coastlineRadio" type="radio" onchange="changeImageCoastline(1)">
+                  <span class="name">FB</span>
+                </label>
+                <label class="radio">
+                  <input name="coastlineRadio" type="radio" onchange="changeImageCoastline(3)">
+                  <span class="name">MW</span>
+                </label>
+                <label class="radio">
+                  <input name="coastlineRadio" type="radio" onchange="changeImageCoastline(5)">
+                  <span class="name">RS</span>
+                </label>
+              </div>
+              <a href="blurion.html"><button class="addtocart">További Információk</button></a>
+            </div>
+          </td>
+          <td>
+            <div class="card">
+              <div class="image">
+                <img src="kepek/rrmansory/rrm1.png" alt="ProductImage" id="rrmImage" class="kep">
+              </div>
+              <div class="productTitle">
+                Wraith MS
+              </div>
+              <div class="cost">
+                $60.99
+              </div>
+              <div class="radio-inputs">
+                <label class="radio">
+                  <input checked="" name="RrmRadio" type="radio" onchange="changeImageRrm(1)">
+                  <span class="name">FB</span>
+                </label>
+                <label class="radio">
+                  <input name="RrmRadio" type="radio" onchange="changeImageRrm(3)">
+                  <span class="name">MW</span>
+                </label>
+                <label class="radio">
+                  <input name="RrmRadio" type="radio" onchange="changeImageRrm(5)">
+                  <span class="name">RS</span>
+                </label>
+              </div>
+              <a href="mflyingspur.html"><button class="addtocart">További Információk</button></a>
+            </div>
+          </td>
+        </tr>
+      </table>
+
+      
+      <script>
+        function changeImageBentley(number) {
+          document.getElementById('bentleyImage').src = 'kepek/bentley/bentley' + number + '.png';
+        }
+      </script>
+      
+      <script>
+        function changeImageBenze(number) {
+          document.getElementById('benzeImage').src = 'kepek/benze55/benze55' + number + '.png';
+        }
+      </script>
+
+      <script>
+        function changeImage5audi(number) {
+          document.getElementById('5audiImage').src = 'kepek/5audi/5audi' + number + '.png';
+        }
+      </script>
+
+      <script>
+        function changeImageEclass(number) {
+          document.getElementById('eclassImage').src = 'kepek/eclass/eclass' + number + '.png';
+        }
+      </script>
+      
+      <script>
+        function changeImageBentayga(number) {
+          document.getElementById('bentaygaImage').src = 'kepek/bentayga/bentayga' + number + '.png';
+        }
+      </script>
+      
+      <script>
+        function changeImage63s(number) {
+          document.getElementById('63sImage').src = 'kepek/63s/63s' + number + '.png';
+        }
+      </script>
+      
+      <script>
+        function changeImage911(number) {
+          document.getElementById('911Image').src = 'kepek/911/911' + number + '.png';
+        }
+      </script>
+
+      <script>
+        function changeImageBghost(number) {
+          document.getElementById('bghostImage').src = 'kepek/bghost/ghost' + number + '.png';
+        }
+      </script>
+
+      <script>
+        function changeImageBlurion(number) {
+          document.getElementById('blurionImage').src = 'kepek/blurion/b' + number + '.png';
+        }
+      </script>
+      
+      <script>
+        function changeImageCoastline(number) {
+          document.getElementById('coastlineImage').src = 'kepek/coastline/coastline' + number + '.png';
+        }
+      </script>
+
+      <script>
+         function changeImageGls(number) {
+           document.getElementById('glsImage').src = 'kepek/gls/gls' + number + '.png';
+      }
+      </script>
+
+      <script>
+        function changeImageM5(number) {
+          document.getElementById('m5Image').src = 'kepek/m5/m5' + number + '.png';
+      }
+      </script>
+
+      <script>
+        function changeImageMansrr(number) {
+          document.getElementById('mansrrImage').src = 'kepek/mansrr/rr' + number + '.png';
+      }
+      </script>
+
+      <script>
+        function changeImageMflyingspur(number) {
+          document.getElementById('mflyingspurImage').src = 'kepek/mflyingspur/mflyingspur' + number + '.png';
+      }
+      </script>
+
+      <script>
+        function changeImageMphantom(number) {
+          document.getElementById('mphantomImage').src = 'kepek/mphantom/phantom' + number + '.png';
+      }
+      </script>
+
+      <script>
+        function changeImagePina(number) {
+          document.getElementById('pinaImage').src = 'kepek/owlalpina/pina' + number + '.png';
+      }
+      </script>
+
+      <script>
+        function changeImageOycbpm(number) {
+          document.getElementById('oycbpmImage').src = 'kepek/oycbpm/taycan' + number + '.png';
+      }
+      </script>
+
+      <script>
+        function changeImageRrm(number) {
+          document.getElementById('rrmImage').src = 'kepek/rrmansory/rrm' + number + '.png';
+      }
+      </script>
+
+      <script>
+        function changeImageRs6(number) {
+          document.getElementById('rs6Image').src = 'kepek/rs6/rs6' + number + '.png';
+      }
+      </script>
+
+      <script>
+        function changeImageRs7(number) {
+          document.getElementById('rs7Image').src = 'kepek/rs7/rs7' + number + '.png';
+      }
+      </script>
+
+      <script>
+        function changeImageRsq8(number) {
+          document.getElementById('rsq8Image').src = 'kepek/rsq8/rsq8' + number + '.png';
+      }
+      </script>
+
+      <script>
+        function changeImageS680(number) {
+          document.getElementById('s680Image').src = 'kepek/s680/680' + number + '.png';
+      }
+      </script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script>
+$(document).ready(function(){
+  // Add smooth scrolling to all links
+  $("a").on('click', function(event) {
+
+    // Make sure this.hash has a value before overriding default behavior
+    if (this.hash !== "") {
+      // Prevent default anchor click behavior
+      event.preventDefault();
+
+      // Store hash
+      var hash = this.hash;
+
+      // Using jQuery's animate() method to add smooth page scroll
+      // The optional number (800) specifies the number of milliseconds it takes to scroll to the specified area
+      $('html, body').animate({
+        scrollTop: $(hash).offset().top
+      }, 800, function(){
+   
+        // Add hash (#) to URL when done scrolling (default click behavior)
+        window.location.hash = hash;
+      });
+    } // End if
+  });
+});
+</script>
+</body>

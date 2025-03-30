@@ -1,0 +1,145 @@
+body {
+    font-family: Arial;
+    margin: 0;
+  }
+  
+  * {
+    box-sizing: border-box;
+  }
+  
+  img {
+    vertical-align: middle;
+  }
+  
+  /* Position the image container (needed to position the left and right arrows) */
+  .container {
+    position: relative;
+  }
+  
+  /* Hide the images by default */
+  .mySlides {
+    display: none;
+    margin-top: -90px;
+  }
+  
+  /* Add a pointer when hovering over the thumbnail images */
+  .cursor {
+    cursor: pointer;
+  }
+  
+  /* Next & previous buttons */
+  .prev,
+  .next {
+    cursor: pointer;
+    position: absolute;
+    top: 40%;
+    width: 10;
+    padding: 16px;
+    margin-top: -50px;
+    color: white;
+    font-weight: bold;
+    font-size: 20px;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+    -webkit-user-select: none;
+    margin-top: -10px;
+    margin-right: 12px;
+  }
+  
+  /* Position the "next button" to the right */
+  .next {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+  }
+  
+  /* On hover, add a black background color with a little bit see-through */
+  .prev:hover,
+  .next:hover {
+    background-color: rgb(0, 0, 0);
+  }
+  
+  /* Number text (1/3 etc) */
+  .numbertext {
+    color: #f2f2f2;
+    font-size: 22px;
+    padding: 8px 12px;
+    position: absolute;
+    top: 0;
+  }
+  
+  /* Container for image text */
+  .caption-container {
+    text-align: center;
+    background-color: #222;
+    padding: 2px 16px;
+    color: white;
+  }
+  
+  .row:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+  
+  /* Six columns side by side */
+  .column {
+    float: left;
+    width: 16.666%;
+    margin-top: 10px;
+  }
+  
+  /* Add a transparency effect for thumnbail images */
+  .demo {
+    opacity: 0.6;
+  }
+  
+  .active,
+  .demo:hover {
+    opacity: 1;
+  }
+  .hatter
+  {
+      background-color: rgb(173, 173, 173);
+      padding: 20px;
+      border-radius: 10px;
+      margin-top: 10px;
+      height: 787px;
+      font-size: 30px;
+      padding: 20px;
+      font-family: Arial, Helvetica, sans-serif;
+      box-shadow: 10px 5px 5px black;
+  }
+  tr,td 
+  {
+      padding: 10px;
+      font-size: 55px;
+      border-radius: 10px;
+      margin-top: 30px;
+  }
+  td
+  {
+    border-bottom: 2px solid rgb(204, 204, 204);
+    padding-top: 40px;
+    text-align: center;
+    margin-top: 30px;
+    margin-left: 20px;
+    font-weight: bold;
+  }
+  #fafa
+  {
+    text-align: left;
+  }
+  .infok
+   {
+    background-color: white;
+    border-radius: 10px;
+    width: auto;
+    height: auto;
+    margin-top: 100px;
+    margin-left: -100px;
+    padding: 30px;
+    margin-left: auto;
+    margin-right: auto;
+    box-shadow: 10px 5px 5px black;
+    margin-bottom: 100px;
+   }

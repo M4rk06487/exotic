@@ -1,0 +1,41 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .card {
+    width: 270px;
+    height: 200px;
+    background-color: #e7e7e7;
+    border: 2px solid #e7e3e3;
+    display: flex;
+    flex-direction: column; /* Oszlopirány */
+    justify-content: center; /* Középre igazítás */
+    align-items: center; /* Középre igazítás */
+    font-size: 110px;
+    font-weight: bold;
+    border-radius: 8px;
+    color: #631A2C;
+    box-shadow: 10px 5px 5px #631A2C;
+    padding: 5px;
+  }
+  .cardh1
+  {
+    font-size: 25px;
+  }
+  table
+  {
+    margin-left: 10px;
+  }
+  td, tr, th
+  {
+    margin-left: 10px;
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+  
